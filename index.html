@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Michael Gee - Software Engineer</title>
+<meta name="description" content="Michael Gee - software engineer at HelloFresh building toward engineering leadership for AI agents.">
+<style>
+  :root {
+    --bg: #e8ebf2;
+    --ink: #141414;
+    --paper: #ffffff;
+    --yellow: #ffd23f;
+    --pink: #ff6b9d;
+    --blue: #5b8cff;
+    --green: #35d98d;
+    --purple: #b98bff;
+    --orange: #ff9f45;
+    --red: #ff5a5f;
+    --bd: 3px solid var(--ink);
+    --sh: 7px 7px 0 var(--ink);
+    --sh-sm: 4px 4px 0 var(--ink);
+    --display: "Arial Black", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --sans: "Inter", -apple-system, "Segoe UI", system-ui, sans-serif;
+    --mono: "SF Mono", "JetBrains Mono", "Menlo", "Consolas", monospace;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; scroll-padding-top: 84px; -webkit-text-size-adjust: 100%; }
+  body {
+    background-color: var(--bg); color: var(--ink); font-family: var(--sans);
+    line-height: 1.55; font-size: 17px; -webkit-font-smoothing: antialiased;
+    background-image:
+      linear-gradient(rgba(20,20,20,0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(20,20,20,0.05) 1px, transparent 1px);
+    background-size: 28px 28px;
+  }
+  ::selection { background: var(--ink); color: var(--yellow); }
+  a { color: inherit; text-decoration: none; }
+  :focus-visible { outline: 3px solid var(--ink); outline-offset: 2px; }
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 0 24px; }
+
+  /* sticker label */
+  .tag-label { display: inline-block; font-family: var(--mono); font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; background: var(--ink); color: #fff; padding: 5px 12px; border: var(--bd); box-shadow: var(--sh-sm); }
+
+  /* ---------- Header ---------- */
+  header { position: sticky; top: 0; z-index: 50; background: var(--bg); border-bottom: var(--bd); }
+  .nav { display: flex; align-items: center; justify-content: space-between; height: 66px; }
+  .brand { font-family: var(--display); font-weight: 900; font-size: 15px; letter-spacing: -0.01em; text-transform: uppercase; background: var(--yellow); color: var(--ink); padding: 7px 12px; border: var(--bd); box-shadow: var(--sh-sm); }
+  .nav-links { display: flex; gap: 6px; }
+  .nav-links a { font-family: var(--mono); font-size: 12px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; padding: 7px 11px; border: 2px solid transparent; transition: background 0.12s, border-color 0.12s; }
+  .nav-links a:hover, .nav-links a.active { background: var(--paper); border: var(--bd); box-shadow: var(--sh-sm); }
+
+  /* ---------- Buttons ---------- */
+  .btn { font-family: var(--mono); font-size: 12px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; padding: 12px 18px; border: var(--bd); background: var(--paper); color: var(--ink); box-shadow: var(--sh-sm); display: inline-flex; align-items: center; gap: 8px; transition: transform 0.08s ease, box-shadow 0.08s ease; }
+  .btn:hover { transform: translate(2px, 2px); box-shadow: 2px 2px 0 var(--ink); }
+  .btn:active { transform: translate(4px, 4px); box-shadow: 0 0 0 var(--ink); }
+  .btn.primary { background: var(--green); }
+  .btn.yellow { background: var(--yellow); }
+
+  /* ---------- Hero ---------- */
+  .hero { padding: 66px 0 0; }
+  .hero-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 20px; }
+  .hero h1 { font-family: var(--display); font-weight: 900; font-size: clamp(54px, 13vw, 132px); line-height: 0.9; letter-spacing: -0.04em; text-transform: uppercase; }
+  .hero h1 .l1 { display: block; }
+  .hero h1 .l2 { display: block; margin-top: 18px; }
+  .hero h1 .hl { display: inline-block; background: var(--yellow); border: var(--bd); box-shadow: var(--sh); padding: 4px 16px 10px; line-height: 0.82; }
+  .hero h1 .dot { color: var(--pink); }
+  .stickers { display: flex; flex-direction: column; gap: 12px; align-items: flex-end; padding-top: 8px; }
+  .sticker { font-family: var(--mono); font-weight: 700; font-size: 13px; text-transform: uppercase; letter-spacing: 0.04em; border: var(--bd); box-shadow: var(--sh-sm); padding: 8px 12px; }
+  .sticker.a { background: var(--pink); transform: rotate(3deg); }
+  .sticker.b { background: var(--blue); transform: rotate(-3deg); }
+  .sticker.c { background: var(--orange); transform: rotate(2deg); font-size: 18px; letter-spacing: 0.12em; }
+  .hero .position { font-family: var(--display); font-weight: 900; font-size: clamp(20px, 3.4vw, 30px); text-transform: uppercase; letter-spacing: -0.01em; margin-top: 48px; line-height: 1.35; max-width: 24ch; }
+  .hero .position .u { display: inline-block; background: var(--green); border: 2px solid var(--ink); padding: 1px 8px; line-height: 1.1; }
+  .hero .intro { margin-top: 22px; max-width: 60ch; color: #2a2a2a; font-size: 17px; }
+  .hero .links { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+
+  /* ---------- Marquee ---------- */
+  .marquee { margin-top: 46px; background: var(--ink); border-top: var(--bd); border-bottom: var(--bd); overflow: hidden; padding: 12px 0; }
+  .marquee-track { display: inline-flex; white-space: nowrap; animation: scroll 42s linear infinite; }
+  .marquee:hover .marquee-track { animation-play-state: paused; }
+  .marquee .item { font-family: var(--mono); font-size: 13px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #fff; padding: 0 18px; }
+  .marquee .item::before { content: "\25C6"; color: var(--yellow); margin-right: 18px; }
+  @keyframes scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  @media (prefers-reduced-motion: reduce) { .marquee-track { animation: none; } }
+
+  /* ---------- Section shell ---------- */
+  section.block { padding: 66px 0; }
+  .sec-head { display: flex; align-items: center; gap: 14px; margin-bottom: 34px; flex-wrap: wrap; }
+  .sec-head h2 { font-family: var(--display); font-weight: 900; font-size: clamp(30px, 5.5vw, 50px); text-transform: uppercase; letter-spacing: -0.02em; }
+
+  .box { border: var(--bd); box-shadow: var(--sh); background: var(--paper); }
+
+  /* ---------- About ---------- */
+  .about-grid { display: grid; grid-template-columns: 1.55fr 1fr; gap: 22px; align-items: start; }
+  .about-copy { padding: 26px 28px; }
+  .about-copy p { color: #262626; margin-bottom: 16px; }
+  .about-copy p:last-child { margin-bottom: 0; }
+  .about-copy b { background: var(--yellow); box-shadow: inset 0 0 0 2px var(--ink); padding: 0 4px; font-weight: 700; }
+  .focus { background: var(--purple); padding: 22px 22px; }
+  .focus h3 { font-family: var(--display); font-weight: 900; font-size: 15px; letter-spacing: 0.04em; text-transform: uppercase; margin-bottom: 14px; }
+  .focus ul { list-style: none; }
+  .focus li { font-family: var(--mono); font-size: 13px; font-weight: 600; padding: 7px 0; border-bottom: 2px solid var(--ink); }
+  .focus li:last-child { border-bottom: 0; }
+  .focus li::before { content: "\2192  "; font-weight: 800; }
+
+  /* ---------- Experience ---------- */
+  .jobs { display: flex; flex-direction: column; gap: 22px; }
+  .job { background: var(--paper); }
+  .job-top { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; padding: 13px 20px; border-bottom: var(--bd); }
+  .job-role { font-family: var(--display); font-weight: 900; font-size: clamp(17px, 2.6vw, 22px); text-transform: uppercase; letter-spacing: -0.01em; }
+  .job-meta { font-family: var(--mono); font-size: 11.5px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+  .now { background: var(--ink); color: var(--green); padding: 2px 9px; font-size: 10px; letter-spacing: 0.14em; }
+  .job-body { padding: 18px 22px 20px; }
+  .job-points { list-style: none; }
+  .job-points li { position: relative; padding: 5px 0 5px 22px; font-size: 15px; color: #262626; line-height: 1.5; }
+  .job-points li::before { content: "\25A0"; position: absolute; left: 0; top: 6px; font-size: 11px; }
+  .tags { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 14px; }
+  .tag { font-family: var(--mono); font-size: 10.5px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; background: var(--bg); border: 2px solid var(--ink); padding: 3px 8px; }
+
+  /* ---------- Skills ---------- */
+  .skills-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+  .skill-card { background: var(--paper); }
+  .skill-head { font-family: var(--display); font-weight: 900; font-size: 14px; letter-spacing: 0.03em; text-transform: uppercase; padding: 11px 16px; border-bottom: var(--bd); }
+  .skill-body { padding: 16px; display: flex; flex-wrap: wrap; gap: 7px; }
+  .chip { font-family: var(--mono); font-size: 11px; font-weight: 600; background: var(--bg); border: 2px solid var(--ink); padding: 4px 9px; }
+
+  /* ---------- Education ---------- */
+  .edu { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; background: var(--blue); padding: 18px 22px; margin-top: 22px; }
+  .edu .school { font-family: var(--display); font-weight: 900; font-size: 20px; text-transform: uppercase; letter-spacing: -0.01em; }
+  .edu .degree { font-family: var(--mono); font-size: 13px; font-weight: 600; }
+  .edu .date { font-family: var(--mono); font-size: 12px; font-weight: 700; text-transform: uppercase; background: var(--ink); color: #fff; padding: 4px 10px; }
+
+  /* ---------- Off the clock ---------- */
+  .play-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 20px; }
+  .play-card { border: var(--bd); box-shadow: var(--sh); padding: 22px 18px; text-align: center; transition: transform 0.1s ease, box-shadow 0.1s ease; }
+  .play-card:hover { transform: translate(3px, 3px); box-shadow: 3px 3px 0 var(--ink); }
+  .play-card:nth-child(1) { background: var(--pink); transform: rotate(-2deg); }
+  .play-card:nth-child(2) { background: var(--blue); transform: rotate(1.5deg); }
+  .play-card:nth-child(3) { background: var(--orange); transform: rotate(-1.5deg); }
+  .play-card:nth-child(4) { background: var(--yellow); transform: rotate(2deg); }
+  .play-card:nth-child(5) { background: var(--green); transform: rotate(-1deg); }
+  .play-card:hover { transform: rotate(0deg) translate(3px, 3px); }
+  .play-card .ico { font-size: 40px; line-height: 1; display: block; margin-bottom: 12px; }
+  .play-card h3 { font-family: var(--display); font-weight: 900; font-size: 17px; text-transform: uppercase; letter-spacing: 0.02em; margin-bottom: 8px; }
+  .play-card p { font-size: 13px; color: #1c1c1c; line-height: 1.45; font-weight: 500; }
+
+  /* ---------- Contact ---------- */
+  .contact-box { background: var(--yellow); padding: 40px 34px; text-align: center; }
+  .contact-box h2 { font-family: var(--display); font-weight: 900; font-size: clamp(30px, 6vw, 58px); text-transform: uppercase; letter-spacing: -0.02em; line-height: 0.98; }
+  .contact-box .sub { font-family: var(--mono); font-weight: 600; margin-top: 14px; font-size: 15px; }
+  .contact-box .links { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 26px; }
+  .contact-box .btn { background: var(--paper); }
+  .contact-box .btn.primary { background: var(--ink); color: #fff; }
+
+  /* ---------- Footer ---------- */
+  footer { border-top: var(--bd); background: var(--ink); color: #fff; }
+  .foot { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; padding: 22px 0; font-family: var(--mono); font-size: 12px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; }
+  .foot a:hover { color: var(--yellow); }
+
+  /* ---------- Responsive ---------- */
+  @media (max-width: 780px) {
+    .about-grid { grid-template-columns: 1fr; }
+    .skills-grid { grid-template-columns: 1fr; }
+    .hero-top { flex-direction: column; }
+    .stickers { flex-direction: row; align-items: flex-start; align-self: flex-start; }
+    section.block { padding: 52px 0; }
+  }
+  @media (max-width: 520px) {
+    .nav-links { gap: 2px; }
+    .nav-links a { padding: 6px 7px; font-size: 11px; }
+    .wrap { padding: 0 18px; }
+    :root { --sh: 5px 5px 0 var(--ink); }
+  }
+</style>
+</head>
+<body>
+
+  <!-- ============ HEADER ============ -->
+  <header>
+    <div class="wrap nav">
+      <a href="#top" class="brand" aria-label="Michael Gee home">MICHAEL GEE</a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#experience">Work</a>
+        <a href="#skills">Skills</a>
+        <a href="#play">Play</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <div class="wrap">
+        <div class="hero-top">
+          <h1><span class="l1">Michael</span><span class="l2"><span class="hl">Gee<span class="dot">.</span></span></span></h1>
+          <div class="stickers" aria-hidden="true">
+            <span class="sticker a">5+ yrs shipping</span>
+            <span class="sticker b">SWE @ HelloFresh</span>
+            <span class="sticker c">&#9824; &#9822; &#127918;</span>
+          </div>
+        </div>
+        <p class="position">Building toward engineering leadership for <span class="u">AI agents.</span></p>
+        <p class="intro">Software engineer with 5+ years shipping production systems at HelloFresh and ZoomInfo - multi-region platforms, bundling algorithms, and microservices that cut latency and defects. I pair distributed-systems and database fundamentals with product taste, focused on agentic workflows that minimize cost while maximizing throughput.</p>
+        <div class="links">
+          <a class="btn primary" href="mailto:michael.k.gee10@gmail.com">Get in touch</a>
+          <a class="btn" href="https://github.com/MichaelG824" target="_blank" rel="noopener">GitHub</a>
+          <a class="btn" href="https://www.linkedin.com/in/mikey-gee" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee-track">
+          <span class="item">Python</span><span class="item">TypeScript</span><span class="item">FastAPI</span><span class="item">NestJS</span><span class="item">.NET Core</span><span class="item">C#</span><span class="item">React</span><span class="item">Angular</span><span class="item">PostgreSQL</span><span class="item">MongoDB</span><span class="item">Kafka</span><span class="item">GCP</span><span class="item">AWS</span><span class="item">Docker</span><span class="item">Kubernetes</span><span class="item">Claude Code</span>
+          <span class="item">Python</span><span class="item">TypeScript</span><span class="item">FastAPI</span><span class="item">NestJS</span><span class="item">.NET Core</span><span class="item">C#</span><span class="item">React</span><span class="item">Angular</span><span class="item">PostgreSQL</span><span class="item">MongoDB</span><span class="item">Kafka</span><span class="item">GCP</span><span class="item">AWS</span><span class="item">Docker</span><span class="item">Kubernetes</span><span class="item">Claude Code</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="block" id="about">
+      <div class="wrap">
+        <div class="sec-head">
+          <span class="tag-label">01 // About</span>
+          <h2>A bit about me</h2>
+        </div>
+        <div class="about-grid">
+          <div class="about-copy box">
+            <p>I'm Michael, a software engineer who cares about the whole path from a rough idea to something people actually rely on. Across <b>HelloFresh</b> and <b>ZoomInfo</b> I've owned multi-region platforms, backend microservices, and the unglamorous data plumbing that keeps a business running.</p>
+            <p>My approach is pragmatic: understand the problem before writing code, keep the design as simple as it can be, and verify everything. Lately I'm most excited by <b>AI agents</b> - directing tools well, and designing agentic workflows that minimize cost while maximizing throughput.</p>
+            <p>Where I'm headed: engineering leadership for AI agents, built on strong distributed-systems and database fundamentals plus real product taste.</p>
+          </div>
+          <aside class="focus box">
+            <h3>Foundation</h3>
+            <ul>
+              <li>Product taste &amp; UX</li>
+              <li>Domain knowledge</li>
+              <li>Communication</li>
+              <li>Leadership &amp; empathy</li>
+              <li>Distributed systems</li>
+              <li>Databases</li>
+              <li>Agentic workflows</li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EXPERIENCE ============ -->
+    <section class="block" id="experience">
+      <div class="wrap">
+        <div class="sec-head">
+          <span class="tag-label">02 // Work</span>
+          <h2>Where I've worked</h2>
+        </div>
+        <div class="jobs">
+
+          <article class="job box">
+            <div class="job-top" style="background:var(--green)">
+              <span class="job-role">Software Engineer / HelloFresh</span>
+              <span class="job-meta"><span>Irving, TX</span><span>&middot;</span><span>Jun 2024 - Present</span><span class="now">NOW</span></span>
+            </div>
+            <div class="job-body">
+              <ul class="job-points">
+                <li>Led architecture of a multi-region QA platform serving US, CA, EU, and AU, with EU data residency and per-region isolation across a unified codebase.</li>
+                <li>Engineered a kitbag bundling algorithm for the P500 initiative that cut cart runs by 6%, and built auto-cart picking that raised warehouse throughput and picker efficiency.</li>
+                <li>Built and owned Redzone Product Master, automating synchronization of source-of-truth data and eliminating manual data entry.</li>
+                <li>Led API design for the Product Family Datastore powering Factor AIO, a platform optimizing kitchen tasks and food data management.</li>
+                <li>Delivered an automated email notification system for the QA App to surface overdue and updated tasks, strengthening audit accountability.</li>
+                <li>Improved developer experience and observability with API gateways, tracing, structured logging, dashboards, and automated linting.</li>
+              </ul>
+              <div class="tags"><span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">PostgreSQL</span><span class="tag">Docker</span><span class="tag">GCP</span><span class="tag">SendGrid</span></div>
+            </div>
+          </article>
+
+          <article class="job box">
+            <div class="job-top" style="background:var(--blue)">
+              <span class="job-role">Software Engineer II / ZoomInfo</span>
+              <span class="job-meta"><span>Waltham, MA</span><span>&middot;</span><span>Jul 2021 - Jun 2024</span></span>
+            </div>
+            <div class="job-body">
+              <ul class="job-points">
+                <li>Built Engage AI Emailer backend microservices, including a throttler and REST API, expanding user engagement capabilities.</li>
+                <li>Implemented an AWS FIFO queue to prevent duplicate contact tasks in Salesflows, cutting high-priority defects by 40%.</li>
+                <li>Resolved production and on-call issues as engineering-excellence work, contributing to a 23% increase in Engage MAUs.</li>
+                <li>Reduced p95 latency by 43% by finding bottlenecks, adding asynchronous data-retrieval endpoints, and writing efficient SQL.</li>
+                <li>Led a full redesign of Engage's Salesflow dropdown, collaborating with UI designers to meet business requirements.</li>
+                <li>Built persistence and data-manipulation infrastructure for the Salesflow Wizard microfrontend.</li>
+              </ul>
+              <div class="tags"><span class="tag">Node.js</span><span class="tag">NestJS</span><span class="tag">TypeScript</span><span class="tag">MongoDB</span><span class="tag">Kafka</span><span class="tag">.NET Core</span><span class="tag">C#</span><span class="tag">Angular</span><span class="tag">AWS</span></div>
+            </div>
+          </article>
+
+          <article class="job box">
+            <div class="job-top" style="background:var(--orange)">
+              <span class="job-role">Software Engineer Intern / Bluebeam</span>
+              <span class="job-meta"><span>Pasadena, CA</span><span>&middot;</span><span>Jun 2020 - Sep 2020</span></span>
+            </div>
+            <div class="job-body">
+              <ul class="job-points">
+                <li>Built and demoed an Apache Airflow proof of concept: a JWT-authenticated REST API for user data, an Airflow workflow, and a UI illustrating data manipulation.</li>
+              </ul>
+              <div class="tags"><span class="tag">Node.js</span><span class="tag">SQLite</span><span class="tag">Apache Airflow</span><span class="tag">JWT</span></div>
+            </div>
+          </article>
+
+          <article class="job box">
+            <div class="job-top" style="background:var(--pink)">
+              <span class="job-role">Software Engineer Intern / WeWork</span>
+              <span class="job-meta"><span>San Francisco, CA</span><span>&middot;</span><span>Jun 2019 - Aug 2019</span></span>
+            </div>
+            <div class="job-body">
+              <ul class="job-points">
+                <li>Built a single-page application on the company's internal API that reduced the time the business spent tracking location data.</li>
+              </ul>
+              <div class="tags"><span class="tag">React</span><span class="tag">Storybook</span></div>
+            </div>
+          </article>
+
+          <article class="job box">
+            <div class="job-top" style="background:var(--purple)">
+              <span class="job-role">Student Programmer / UCLA SSC</span>
+              <span class="job-meta"><span>Westwood, CA</span><span>&middot;</span><span>Sep 2018 - Jan 2019</span></span>
+            </div>
+            <div class="job-body">
+              <ul class="job-points">
+                <li>Fixed bugs to improve UCLA's student and faculty Moodle platform, serving over 40,000 users.</li>
+              </ul>
+              <div class="tags"><span class="tag">MySQL</span><span class="tag">PHP</span></div>
+            </div>
+          </article>
+
+          <article class="job box">
+            <div class="job-top" style="background:var(--yellow)">
+              <span class="job-role">Software Engineer Intern / Textpert</span>
+              <span class="job-meta"><span>Culver City, CA</span><span>&middot;</span><span>Jun 2018 - Aug 2018</span></span>
+            </div>
+            <div class="job-body">
+              <ul class="job-points">
+                <li>Designed and built a dashboard to track mental-health trends for AiME, a diagnostic AI therapy tool.</li>
+              </ul>
+              <div class="tags"><span class="tag">Vue.js</span><span class="tag">VueX</span><span class="tag">Chart.js</span></div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SKILLS ============ -->
+    <section class="block" id="skills">
+      <div class="wrap">
+        <div class="sec-head">
+          <span class="tag-label">03 // Skills</span>
+          <h2>What I work with</h2>
+        </div>
+        <div class="skills-grid">
+          <div class="skill-card box">
+            <div class="skill-head" style="background:var(--yellow)">Languages</div>
+            <div class="skill-body">
+              <span class="chip">Python</span><span class="chip">TypeScript</span><span class="chip">C#</span><span class="chip">SQL</span><span class="chip">JavaScript</span><span class="chip">C++</span><span class="chip">PHP</span><span class="chip">HTML</span><span class="chip">SCSS</span>
+            </div>
+          </div>
+          <div class="skill-card box">
+            <div class="skill-head" style="background:var(--green)">Frameworks</div>
+            <div class="skill-body">
+              <span class="chip">FastAPI</span><span class="chip">NestJS</span><span class="chip">.NET Core</span><span class="chip">.NET 6</span><span class="chip">Node.js</span><span class="chip">Angular</span><span class="chip">Prisma</span><span class="chip">React</span><span class="chip">Redux</span><span class="chip">Storybook</span><span class="chip">Jest</span><span class="chip">Enzyme</span><span class="chip">Vue</span><span class="chip">VueX</span>
+            </div>
+          </div>
+          <div class="skill-card box">
+            <div class="skill-head" style="background:var(--pink)">Tools</div>
+            <div class="skill-body">
+              <span class="chip">Claude Code</span><span class="chip">Cursor</span><span class="chip">Git</span><span class="chip">DataDog</span><span class="chip">Rapid7</span><span class="chip">PostgreSQL</span><span class="chip">Elasticsearch</span><span class="chip">AWS</span><span class="chip">GCP</span><span class="chip">MongoDB</span><span class="chip">Kafka</span><span class="chip">Webpack</span><span class="chip">Kubernetes</span><span class="chip">Docker</span><span class="chip">Snowflake</span>
+            </div>
+          </div>
+        </div>
+        <div class="edu box">
+          <div>
+            <div class="school">UC Los Angeles</div>
+            <div class="degree">B.S. in Computer Science</div>
+          </div>
+          <div class="date">Graduated Dec 2020</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ OFF THE CLOCK ============ -->
+    <section class="block" id="play">
+      <div class="wrap">
+        <div class="sec-head">
+          <span class="tag-label">04 // Play</span>
+          <h2>Off the clock</h2>
+        </div>
+        <div class="play-grid">
+          <div class="play-card">
+            <span class="ico">&#9824;&#65039;</span>
+            <h3>Poker</h3>
+            <p>Reading the table, managing variance, knowing when to fold. Math and psychology both scratch an itch.</p>
+          </div>
+          <div class="play-card">
+            <span class="ico">&#9822;</span>
+            <h3>Chess</h3>
+            <p>Openings, tactics, and the long game - where patience meets pattern-recognition.</p>
+          </div>
+          <div class="play-card">
+            <span class="ico">&#127947;&#65039;</span>
+            <h3>Lifting</h3>
+            <p>Progressive overload and showing up. Discipline under the bar that carries into everything.</p>
+          </div>
+          <div class="play-card">
+            <span class="ico">&#127859;</span>
+            <h3>Cooking</h3>
+            <p>Weeknight experiments to from-scratch meals. Good food is a system worth iterating on.</p>
+          </div>
+          <div class="play-card">
+            <span class="ico">&#127918;</span>
+            <h3>Gaming</h3>
+            <p>Strategy, competition, and worlds worth getting lost in after a long day of building.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="block" id="contact">
+      <div class="wrap">
+        <div class="contact-box box">
+          <h2>Let's build something.</h2>
+          <p class="sub">Have a role in mind, or something to ship? My inbox is open.</p>
+          <div class="links">
+            <a class="btn primary" href="mailto:michael.k.gee10@gmail.com">Email me</a>
+            <a class="btn" href="tel:+18184278207">(818) 427-8207</a>
+            <a class="btn" href="https://github.com/MichaelG824" target="_blank" rel="noopener">GitHub</a>
+            <a class="btn" href="https://www.linkedin.com/in/mikey-gee" target="_blank" rel="noopener">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer>
+    <div class="wrap foot">
+      <span>&copy; 2026 Michael Gee</span>
+      <a href="#top">Back to top &uarr;</a>
+    </div>
+  </footer>
+
+  <script>
+    // Active nav link on scroll
+    (function () {
+      var links = Array.prototype.slice.call(document.querySelectorAll('.nav-links a'));
+      var map = {};
+      links.forEach(function (l) { var id = l.getAttribute('href').slice(1); if (id) map[id] = l; });
+      var ids = ['about', 'experience', 'skills', 'play', 'contact'];
+      var sections = ids.map(function (id) { return document.getElementById(id); }).filter(Boolean);
+      if (!('IntersectionObserver' in window)) return;
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            links.forEach(function (l) { l.classList.remove('active'); });
+            if (map[entry.target.id]) map[entry.target.id].classList.add('active');
+          }
+        });
+      }, { threshold: 0.4 });
+      sections.forEach(function (s) { io.observe(s); });
+    })();
+  </script>
+</body>
+</html>
