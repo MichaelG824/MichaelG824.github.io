@@ -181,6 +181,7 @@
       <nav class="nav-links" aria-label="Primary">
         <a href="#about">About</a>
         <a href="#experience">Work</a>
+        <a href="#projects">Projects</a>
         <a href="#skills">Skills</a>
         <a href="#play">Play</a>
         <a href="#contact">Contact</a>
@@ -262,13 +263,14 @@
             <div class="job-body">
               <ul class="job-points">
                 <li>Led architecture of a multi-region QA platform serving US, CA, EU, and AU, with EU data residency and per-region isolation across a unified codebase.</li>
+                <li>Built a CDC pipeline streaming PostgreSQL changes into Snowflake, giving business analysts near-real-time data.</li>
                 <li>Engineered a kitbag bundling algorithm for the P500 initiative that cut cart runs by 6%, and built auto-cart picking that raised warehouse throughput and picker efficiency.</li>
                 <li>Built and owned Redzone Product Master, automating synchronization of source-of-truth data and eliminating manual data entry.</li>
                 <li>Led API design for the Product Family Datastore powering Factor AIO, a platform optimizing kitchen tasks and food data management.</li>
                 <li>Delivered an automated email notification system for the QA App to surface overdue and updated tasks, strengthening audit accountability.</li>
                 <li>Improved developer experience and observability with API gateways, tracing, structured logging, dashboards, and automated linting.</li>
               </ul>
-              <div class="tags"><span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">PostgreSQL</span><span class="tag">Docker</span><span class="tag">GCP</span><span class="tag">SendGrid</span></div>
+              <div class="tags"><span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">PostgreSQL</span><span class="tag">Snowflake</span><span class="tag">Docker</span><span class="tag">GCP</span><span class="tag">SendGrid</span></div>
             </div>
           </article>
 
@@ -346,11 +348,36 @@
       </div>
     </section>
 
+    <!-- ============ PROJECTS ============ -->
+    <section class="block" id="projects">
+      <div class="wrap">
+        <div class="sec-head">
+          <span class="tag-label">03 // Projects</span>
+          <h2>What I'm building</h2>
+        </div>
+        <div class="jobs">
+          <article class="job box">
+            <div class="job-top" style="background:var(--purple)">
+              <span class="job-role">Dayline / AI Full-Stack Developer</span>
+              <span class="job-meta"><span>Personal project</span><span>&middot;</span><span>Aug 2026 - Present</span><span class="now">NOW</span></span>
+            </div>
+            <div class="job-body">
+              <ul class="job-points">
+                <li>Building an Anthropic-powered conversational assistant that generates multiple coordinated schedule changes from a single request.</li>
+                <li>Engineered a first-party Google Calendar integration that syncs interviews and tasks to the user's real calendar and keeps events accurate as the schedule changes.</li>
+              </ul>
+              <div class="tags"><span class="tag">Next.js</span><span class="tag">TypeScript</span><span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">Supabase</span><span class="tag">Anthropic API</span><span class="tag">Google Calendar API</span></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <!-- ============ SKILLS ============ -->
     <section class="block" id="skills">
       <div class="wrap">
         <div class="sec-head">
-          <span class="tag-label">03 // Skills</span>
+          <span class="tag-label">04 // Skills</span>
           <h2>What I work with</h2>
         </div>
         <div class="skills-grid">
@@ -369,7 +396,7 @@
           <div class="skill-card box">
             <div class="skill-head" style="background:var(--pink)">Tools</div>
             <div class="skill-body">
-              <span class="chip">Claude Code</span><span class="chip">Cursor</span><span class="chip">Git</span><span class="chip">DataDog</span><span class="chip">Rapid7</span><span class="chip">PostgreSQL</span><span class="chip">Elasticsearch</span><span class="chip">AWS</span><span class="chip">GCP</span><span class="chip">MongoDB</span><span class="chip">Kafka</span><span class="chip">Webpack</span><span class="chip">Kubernetes</span><span class="chip">Docker</span><span class="chip">Snowflake</span>
+              <span class="chip">Claude Code</span><span class="chip">Cursor</span><span class="chip">MCP</span><span class="chip">LangChain</span><span class="chip">RAG</span><span class="chip">Vector DBs</span><span class="chip">LLM Evals</span><span class="chip">Agentic Workflows</span><span class="chip">Git</span><span class="chip">DataDog</span><span class="chip">Rapid7</span><span class="chip">PostgreSQL</span><span class="chip">Elasticsearch</span><span class="chip">AWS</span><span class="chip">GCP</span><span class="chip">MongoDB</span><span class="chip">Kafka</span><span class="chip">Webpack</span><span class="chip">Kubernetes</span><span class="chip">Docker</span><span class="chip">Snowflake</span>
             </div>
           </div>
         </div>
@@ -387,7 +414,7 @@
     <section class="block" id="play">
       <div class="wrap">
         <div class="sec-head">
-          <span class="tag-label">04 // Play</span>
+          <span class="tag-label">05 // Play</span>
           <h2>Off the clock</h2>
         </div>
         <div class="play-grid">
@@ -450,7 +477,7 @@
       var links = Array.prototype.slice.call(document.querySelectorAll('.nav-links a'));
       var map = {};
       links.forEach(function (l) { var id = l.getAttribute('href').slice(1); if (id) map[id] = l; });
-      var ids = ['about', 'experience', 'skills', 'play', 'contact'];
+      var ids = ['about', 'experience', 'projects', 'skills', 'play', 'contact'];
       var sections = ids.map(function (id) { return document.getElementById(id); }).filter(Boolean);
       if (!('IntersectionObserver' in window)) return;
       var io = new IntersectionObserver(function (entries) {
