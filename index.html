@@ -211,8 +211,8 @@
       </div>
       <div class="marquee" aria-hidden="true">
         <div class="marquee-track">
-          <span class="item">Python</span><span class="item">TypeScript</span><span class="item">FastAPI</span><span class="item">NestJS</span><span class="item">.NET Core</span><span class="item">C#</span><span class="item">React</span><span class="item">Angular</span><span class="item">PostgreSQL</span><span class="item">MongoDB</span><span class="item">Kafka</span><span class="item">GCP</span><span class="item">AWS</span><span class="item">Docker</span><span class="item">Kubernetes</span><span class="item">Claude Code</span>
-          <span class="item">Python</span><span class="item">TypeScript</span><span class="item">FastAPI</span><span class="item">NestJS</span><span class="item">.NET Core</span><span class="item">C#</span><span class="item">React</span><span class="item">Angular</span><span class="item">PostgreSQL</span><span class="item">MongoDB</span><span class="item">Kafka</span><span class="item">GCP</span><span class="item">AWS</span><span class="item">Docker</span><span class="item">Kubernetes</span><span class="item">Claude Code</span>
+          <span class="item">Python</span><span class="item">Typescript</span><span class="item">FastAPI</span><span class="item">NestJS</span><span class="item">.NET Core</span><span class="item">C#</span><span class="item">React</span><span class="item">Angular</span><span class="item">PostgreSQL</span><span class="item">MongoDB</span><span class="item">Kafka</span><span class="item">GCP</span><span class="item">AWS</span><span class="item">Docker</span><span class="item">Kubernetes</span><span class="item">Snowflake</span>
+          <span class="item">Python</span><span class="item">Typescript</span><span class="item">FastAPI</span><span class="item">NestJS</span><span class="item">.NET Core</span><span class="item">C#</span><span class="item">React</span><span class="item">Angular</span><span class="item">PostgreSQL</span><span class="item">MongoDB</span><span class="item">Kafka</span><span class="item">GCP</span><span class="item">AWS</span><span class="item">Docker</span><span class="item">Kubernetes</span><span class="item">Snowflake</span>
         </div>
       </div>
     </section>
@@ -258,89 +258,68 @@
           <article class="job box">
             <div class="job-top" style="background:var(--green)">
               <span class="job-role">Software Engineer / HelloFresh</span>
-              <span class="job-meta"><span>Irving, TX</span><span>&middot;</span><span>Jun 2024 - Present</span><span class="now">NOW</span></span>
+              <span class="job-meta"><span>Irving, TX</span><span>&middot;</span><span>June 2024 - Present</span><span class="now">NOW</span></span>
             </div>
             <div class="job-body">
               <ul class="job-points">
-                <li>Led architecture of a multi-region QA platform serving US, CA, EU, and AU, with EU data residency and per-region isolation across a unified codebase.</li>
-                <li>Built a CDC pipeline streaming PostgreSQL changes into Snowflake, giving business analysts near-real-time data.</li>
-                <li>Engineered a kitbag bundling algorithm for the P500 initiative that cut cart runs by 6%, and built auto-cart picking that raised warehouse throughput and picker efficiency.</li>
-                <li>Built and owned Redzone Product Master, automating synchronization of source-of-truth data and eliminating manual data entry.</li>
-                <li>Led API design for the Product Family Datastore powering Factor AIO, a platform optimizing kitchen tasks and food data management.</li>
-                <li>Delivered an automated email notification system for the QA App to surface overdue and updated tasks, strengthening audit accountability.</li>
-                <li>Improved developer experience and observability with API gateways, tracing, structured logging, dashboards, and automated linting.</li>
+                <li>Led re-architecture of a multi-region QA platform (US, CA, EU, AU) with EU data residency and per-region isolation on a unified codebase, and built a CDC pipeline streaming PostgreSQL data into Snowflake for business analysts</li>
+                <li>Relocated the EU Cloud Run service from the US to the same region as its Frankfurt database, cutting EU median latency 96% (~500ms → ~19ms) by eliminating transatlantic round-trips</li>
+                <li>Engineered a kitbag bundling algorithm as part of the P500 initiative that cut cart runs by 6% and developed auto-cart picking functionality, directly increasing warehouse throughput and picker efficiency</li>
+                <li>Built and owned Redzone Product Master, automating synchronization of source-of-truth data into the Redzone database and eliminating manual data entry</li>
+                <li>Delivered an automated email notification system for the QA App to surface overdue and updated tasks, strengthening audit accountability and reducing manual follow-up overhead (Python, FastAPI, PostgreSQL, GCP, SendGrid)</li>
+                <li>Improved developer experience and system observability across multiple services by integrating API Gateways, tracing, structured logging, dashboards and automated linting standards into the team's stack</li>
               </ul>
-              <div class="tags"><span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">PostgreSQL</span><span class="tag">Snowflake</span><span class="tag">Docker</span><span class="tag">GCP</span><span class="tag">SendGrid</span></div>
+              <div class="tags"><span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">PostgreSQL</span><span class="tag">GCP</span><span class="tag">SendGrid</span></div>
             </div>
           </article>
 
           <article class="job box">
             <div class="job-top" style="background:var(--blue)">
               <span class="job-role">Software Engineer II / ZoomInfo</span>
-              <span class="job-meta"><span>Waltham, MA</span><span>&middot;</span><span>Jul 2021 - Jun 2024</span></span>
+              <span class="job-meta"><span>Waltham, MA</span><span>&middot;</span><span>July 2021 – June 2024</span></span>
             </div>
             <div class="job-body">
               <ul class="job-points">
-                <li>Built Engage AI Emailer backend microservices, including a throttler and REST API, expanding user engagement capabilities.</li>
-                <li>Implemented an AWS FIFO queue to prevent duplicate contact tasks in Salesflows, cutting high-priority defects by 40%.</li>
-                <li>Resolved production and on-call issues as engineering-excellence work, contributing to a 23% increase in Engage MAUs.</li>
-                <li>Reduced p95 latency by 43% by finding bottlenecks, adding asynchronous data-retrieval endpoints, and writing efficient SQL.</li>
-                <li>Led a full redesign of Engage's Salesflow dropdown, collaborating with UI designers to meet business requirements.</li>
-                <li>Built persistence and data-manipulation infrastructure for the Salesflow Wizard microfrontend.</li>
+                <li>Built Engage AI Emailer backend microservices, including throttler and REST API, to increase engagement capabilities for users (GCP, Node.js, NestJS, Typescript, MongoDB, Jest, Prisma, Kafka, Docker)</li>
+                <li>Owned multiple hotfixes such as implementing AWS FIFO queue to prevent duplicate contact tasks within Salesflows leading to 40% reduction of high priority defects for Engage platform</li>
+                <li>Completed engineering excellence tasks and fixed software issues found during on-call rotation and production deployment leading to 23% increase in MAUs for Engage</li>
+                <li>Reduced p95 latency by 43% by detecting bottlenecks, implementing new asynchronous data retrieval endpoints, and writing efficient SQL queries (.NET Core, C#, Datadog, SQL)</li>
+                <li>Built infrastructure to handle persistence and manipulation of form data for the Salesflow Wizard Microfrontend</li>
               </ul>
-              <div class="tags"><span class="tag">Node.js</span><span class="tag">NestJS</span><span class="tag">TypeScript</span><span class="tag">MongoDB</span><span class="tag">Kafka</span><span class="tag">.NET Core</span><span class="tag">C#</span><span class="tag">Angular</span><span class="tag">AWS</span></div>
+              <div class="tags"><span class="tag">GCP</span><span class="tag">Node.js</span><span class="tag">NestJS</span><span class="tag">Typescript</span><span class="tag">MongoDB</span><span class="tag">Jest</span><span class="tag">Prisma</span><span class="tag">Kafka</span><span class="tag">Docker</span><span class="tag">.NET Core</span><span class="tag">C#</span><span class="tag">Datadog</span><span class="tag">SQL</span></div>
             </div>
           </article>
 
           <article class="job box">
             <div class="job-top" style="background:var(--orange)">
               <span class="job-role">Software Engineer Intern / Bluebeam</span>
-              <span class="job-meta"><span>Pasadena, CA</span><span>&middot;</span><span>Jun 2020 - Sep 2020</span></span>
+              <span class="job-meta"><span>Pasadena, CA</span><span>&middot;</span><span>June 2020 – September 2020</span></span>
             </div>
             <div class="job-body">
               <ul class="job-points">
-                <li>Built and demoed an Apache Airflow proof of concept: a JWT-authenticated REST API for user data, an Airflow workflow, and a UI illustrating data manipulation.</li>
+                <li>Built and demoed PoC of Apache Airflow by implementing a REST API that uses JWT authenticated endpoints to handle user data, designing Airflow workflow, and developing UI to illustrate data manipulation (Node.js, Sqlite)</li>
               </ul>
-              <div class="tags"><span class="tag">Node.js</span><span class="tag">SQLite</span><span class="tag">Apache Airflow</span><span class="tag">JWT</span></div>
+              <div class="tags"><span class="tag">Node.js</span><span class="tag">Sqlite</span></div>
             </div>
           </article>
 
           <article class="job box">
             <div class="job-top" style="background:var(--pink)">
               <span class="job-role">Software Engineer Intern / WeWork</span>
-              <span class="job-meta"><span>San Francisco, CA</span><span>&middot;</span><span>Jun 2019 - Aug 2019</span></span>
+              <span class="job-meta"><span>San Francisco, CA</span><span>&middot;</span><span>June 2019 – August 2019</span></span>
             </div>
             <div class="job-body">
               <ul class="job-points">
-                <li>Built a single-page application on the company's internal API that reduced the time the business spent tracking location data.</li>
+                <li>Built a single page application that uses company internal API to decrease time spent by business in tracking location data (React, Storybook)</li>
               </ul>
               <div class="tags"><span class="tag">React</span><span class="tag">Storybook</span></div>
             </div>
           </article>
 
           <article class="job box">
-            <div class="job-top" style="background:var(--purple)">
-              <span class="job-role">Student Programmer / UCLA SSC</span>
-              <span class="job-meta"><span>Westwood, CA</span><span>&middot;</span><span>Sep 2018 - Jan 2019</span></span>
-            </div>
-            <div class="job-body">
-              <ul class="job-points">
-                <li>Fixed bugs to improve UCLA's student and faculty Moodle platform, serving over 40,000 users.</li>
-              </ul>
-              <div class="tags"><span class="tag">MySQL</span><span class="tag">PHP</span></div>
-            </div>
-          </article>
-
-          <article class="job box">
-            <div class="job-top" style="background:var(--yellow)">
+            <div class="job-top" style="background:var(--yellow);border-bottom:0">
               <span class="job-role">Software Engineer Intern / Textpert</span>
-              <span class="job-meta"><span>Culver City, CA</span><span>&middot;</span><span>Jun 2018 - Aug 2018</span></span>
-            </div>
-            <div class="job-body">
-              <ul class="job-points">
-                <li>Designed and built a dashboard to track mental-health trends for AiME, a diagnostic AI therapy tool.</li>
-              </ul>
-              <div class="tags"><span class="tag">Vue.js</span><span class="tag">VueX</span><span class="tag">Chart.js</span></div>
+              <span class="job-meta"><span>Culver City, CA</span><span>&middot;</span><span>June 2018 - August 2018</span></span>
             </div>
           </article>
 
@@ -359,12 +338,11 @@
           <article class="job box">
             <div class="job-top" style="background:var(--purple)">
               <span class="job-role">Dayline / AI Full-Stack Developer</span>
-              <span class="job-meta"><span>Personal project</span><span>&middot;</span><span>Aug 2026 - Present</span><span class="now">NOW</span></span>
+              <span class="job-meta"><span>August 2026 - Present</span><span class="now">NOW</span></span>
             </div>
             <div class="job-body">
               <ul class="job-points">
-                <li>Building an Anthropic-powered conversational assistant that generates multiple coordinated schedule changes from a single request.</li>
-                <li>Engineered a first-party Google Calendar integration that syncs interviews and tasks to the user's real calendar and keeps events accurate as the schedule changes.</li>
+                <li>Developing a full stack app with an Anthropic-powered conversational assistant that generates multiple coordinated schedule changes in one request (Next.js, TypeScript, Python, FastAPI, Supabase, Anthropic API, Google Calendar API)</li>
               </ul>
               <div class="tags"><span class="tag">Next.js</span><span class="tag">TypeScript</span><span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">Supabase</span><span class="tag">Anthropic API</span><span class="tag">Google Calendar API</span></div>
             </div>
@@ -384,28 +362,28 @@
           <div class="skill-card box">
             <div class="skill-head" style="background:var(--yellow)">Languages</div>
             <div class="skill-body">
-              <span class="chip">Python</span><span class="chip">TypeScript</span><span class="chip">C#</span><span class="chip">SQL</span><span class="chip">JavaScript</span><span class="chip">C++</span><span class="chip">PHP</span><span class="chip">HTML</span><span class="chip">SCSS</span>
+              <span class="chip">Python</span><span class="chip">Typescript</span><span class="chip">C#</span><span class="chip">SQL</span><span class="chip">Javascript</span><span class="chip">C++</span><span class="chip">PHP</span><span class="chip">HTML</span><span class="chip">SCSS</span>
             </div>
           </div>
           <div class="skill-card box">
-            <div class="skill-head" style="background:var(--green)">Frameworks</div>
+            <div class="skill-head" style="background:var(--green)">Frameworks and Libraries</div>
             <div class="skill-body">
               <span class="chip">FastAPI</span><span class="chip">NestJS</span><span class="chip">.NET Core</span><span class="chip">.NET 6</span><span class="chip">Node.js</span><span class="chip">Angular</span><span class="chip">Prisma</span><span class="chip">React</span><span class="chip">Redux</span><span class="chip">Storybook</span><span class="chip">Jest</span><span class="chip">Enzyme</span><span class="chip">Vue</span><span class="chip">VueX</span>
             </div>
           </div>
           <div class="skill-card box">
-            <div class="skill-head" style="background:var(--pink)">Tools</div>
+            <div class="skill-head" style="background:var(--pink)">Tools and Technologies</div>
             <div class="skill-body">
-              <span class="chip">Claude Code</span><span class="chip">Cursor</span><span class="chip">MCP</span><span class="chip">LangChain</span><span class="chip">RAG</span><span class="chip">Vector DBs</span><span class="chip">LLM Evals</span><span class="chip">Agentic Workflows</span><span class="chip">Git</span><span class="chip">DataDog</span><span class="chip">Rapid7</span><span class="chip">PostgreSQL</span><span class="chip">Elasticsearch</span><span class="chip">AWS</span><span class="chip">GCP</span><span class="chip">MongoDB</span><span class="chip">Kafka</span><span class="chip">Webpack</span><span class="chip">Kubernetes</span><span class="chip">Docker</span><span class="chip">Snowflake</span>
+              <span class="chip">PostgreSQL</span><span class="chip">Elasticsearch</span><span class="chip">AWS</span><span class="chip">GCP</span><span class="chip">MongoDB</span><span class="chip">Kafka</span><span class="chip">Docker</span><span class="chip">Kubernetes</span><span class="chip">Snowflake</span><span class="chip">MCP</span><span class="chip">Agentic Workflows</span><span class="chip">RAG</span><span class="chip">Vector DBs</span><span class="chip">LLM Evals</span><span class="chip">LangChain</span>
             </div>
           </div>
         </div>
         <div class="edu box">
           <div>
-            <div class="school">UC Los Angeles</div>
-            <div class="degree">B.S. in Computer Science</div>
+            <div class="school">University of California Los Angeles</div>
+            <div class="degree">B.S in Computer Science</div>
           </div>
-          <div class="date">Graduated Dec 2020</div>
+          <div class="date">Graduation Date: December 2020</div>
         </div>
       </div>
     </section>
